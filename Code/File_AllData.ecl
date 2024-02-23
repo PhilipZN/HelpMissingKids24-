@@ -52,6 +52,15 @@ EXPORT Education := RECORD
     REAL8     Value;
 END;
 
+EXPORT teen_pregnancy := RECORD
+    STRING YEAR;
+    STRING STATE;
+    REAL RATE;
+    STRING URL;
+END;
+
+EXPORT teen_pregnancyDS := DATASET('~hmk::in::teenpregnancy',teen_pregnancy,CSV(HEADING(1)));
+
 EXPORT EducationDS := DATASET('~hmk::in::education',education,CSV(HEADING(1)));
 
 EXPORT pop_estimates := RECORD
